@@ -1,0 +1,41 @@
+body{
+    background-color: rgba(104, 255, 154, 0.795);
+    padding: 60px 0px 0px 0px;
+        z-index:1;
+    
+    }
+.row-content {
+        margin: 0px auto;
+        padding: 15px 0px 15px 0px;
+        border-bottom: 1px ridge #28a745 ;
+        min-height: 400px; 
+}
+.navbar-dark {
+    background: linear-gradient(hsl(209, 100%, 23%), hsl(223, 79%, 47%), hsl(240, 70%, 31%));
+        color: #ffc947;
+        padding:10px;
+    }
+    
+    .nav-link,.navbar-brand {
+        color: #ffc947 !important;
+    }
+    .nav-link:hover{
+        color: #28a745 !important;
+    }
+    .navbar-dark .fa-bars{
+        color:#ffc947;
+    
+    }
+    
+    .navbar-dark .navbar-collapse{
+        margin:0px  0px 0px 0px;
+    }
+html{
+    background-color: rgba(104, 255, 154, 0.795);
+    z-index: 0;
+}
+
+n{
+    border: red 1px;
+    
+}
