@@ -1,8 +1,7 @@
 body{
-   
     background-color: rgba(104, 255, 154, 0.795);
     padding: 60px 0px 0px 0px;
-        z-index:0;
+        z-index:1;
     
     }
 .row-content {
@@ -30,3 +29,13 @@ body{
     
     .navbar-dark .navbar-collapse{
         margin:0px  0px 0px 0px;
+    }
+html{
+    background-color: rgba(104, 255, 154, 0.795);
+    z-index: 0;
+}
+
+n{
+    border: red 1px;
+    
+}
