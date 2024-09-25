@@ -14,28 +14,108 @@
          <!---CDN Javascript poppser -------------------------------------->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 </head>
+<navbar>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="fas fa-bars fa-lg"></span>
+              </button>
+  
+             <a class="navbar-brand" href="./index.html"><img src="https://avatars.githubusercontent.com/u/75169332?v=4" class="rounded float-left" height="55" width="55"></span>    </a>
+             
+             <div class="collapse navbar-collapse" id="Navbar">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active"><a class="nav-link" href="#head"><span class="fa fa-home fa-lg"></span> Acceuil</a></li>
+              </ul>
+          </div>
+                             
+          </div>
+      </nav>
+</navbar>
 <body>
-    <navbar>
-        <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-            <div class="container">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                    <span class="fas fa-bars fa-lg"></span>
-                  </button>
-      
-                 <a class="navbar-brand" href="./index.html"><img src="https://avatars.githubusercontent.com/u/75169332?v=4" class="rounded float-left" height="55" width="55"></span>    </a>
-                 
-                 <div class="collapse navbar-collapse" id="Navbar">
-                  <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active"><a class="nav-link" href="#head"><span class="fa fa-home fa-lg"></span> Acceuil</a></li>
-                  </ul>
-              </div>
-                                 
-              </div>
-          </nav>
-    </navbar>
+    
     <!----endnavblue---->
-    <div>
-        <h1>Le front a fufu</h1>
+    <div class="container">
+        <div class="site">
+            <h1>Hello there</h1>
+            <div class="box">
+                <h2>Je suis un dev2con</h2>
+                <p>Je suis clement, un dev de truc sur le web</p>
+                <h3>Voici mes compétences</h3>
+                <!---Début card-->
+                <card>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                          <div class="card h-100">
+                            <img src="./IMG/cmd.png" width="202" height="200" class="card-img-top" alt="Icone de l'invite de commande">
+                            <div class="card-body">
+                              <h5 class="card-title">Batch/Powershell</h5>
+                              <p class="card-text">Je suis un peu developper en batch, le language natif de windows. Je possède certain projet comme des récuperateur de vrai accès admin (accès SYSTEM)</p>
+                              <a href="https://github.com/cbaie9/wpcKiller" class="btn btn-warning">Projet (wpcKiller; non supportée)</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100">
+                            <img src="./IMG/Mcreator.webp"  class="card-img-top" alt="Mcreator">
+                            <div class="card-body">
+                              <h5 class="card-title">Mcreator (no code java)</h5>
+                              <p class="card-text">Je possède un grosse experience sur ce logiciel de création de mod Minecraft, je connais en profondeur la plupart des extention</p>
+                              <a href="https://github.com/cbaie9/palamod" class="btn btn-info">Projet (palamod)</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100">
+                            <img src="./IMG/html-css.jpg" class="card-img-top" alt="Html/Css">
+                            <div class="card-body">
+                              <h5 class="card-title">Html/Css</h5>
+                              <p class="card-text">J'apprend actuellement le html et css d'ou ce site réaliser par mes soin</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </card>
+                <!--Fin card-->
+            </div>
+            <h1>Réseaux sociaux</h1>
+            <div class="box">
+                <!--Card ytb-->
+                <div class="card mb-3">
+                    <iframe class="ytb-player" width="560" height="315" src="https://www.youtube-nocookie.com/embed/qGsJEb8brDs?si=-5jbsEWpV83Zll9Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="card-body">
+                      <h5 class="card-title">Youtube</h5>
+                      <p class="card-text">Ma chaine ytb, peu active mais toujours là</p>
+                      <p class="card-text"><small class="text-body-secondary">Video lié a l'exemple de mcreator</small></p>
+                      <a href="https://www.youtube.com/@cbaie9393" class="btn btn-danger">Youtube</a>
+                    </div>
+                  </div>
+                <!--Fin card ytb-->
+                <br>
+                <div class="twitch">
+                    <div class="twitch-video">
+                      <iframe
+                        src="https://player.twitch.tv/?channel=cbaie9&parent=cbaie9.github.io&autoplay=false"
+                        frameborder="0"
+                        scrolling="no"
+                        allowfullscreen="true"
+                        height="100%"
+                        width="100%">
+                      </iframe>
+                    </div>
+                    <div class="twitch-chat">
+                      <iframe
+                        frameborder="0"
+                        scrolling="no"
+                        src="https://www.twitch.tv/embed/cbaie9/chat?parent=cbaie9.github.io"
+                        height="100%"
+                        width="100%">
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

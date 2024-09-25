@@ -1,20 +1,16 @@
 body{
-    background-color: rgba(104, 255, 154, 0.795);
+    background-image: url("./img/space-stars-texture.webp");
+    backdrop-filter: blur(1px);
     padding: 60px 0px 0px 0px;
-        z-index:1;
+        z-index:0;
     
     }
-.row-content {
-        margin: 0px auto;
-        padding: 15px 0px 15px 0px;
-        border-bottom: 1px ridge #28a745 ;
-        min-height: 400px; 
-}
 .navbar-dark {
     background: linear-gradient(hsl(209, 100%, 23%), hsl(223, 79%, 47%), hsl(240, 70%, 31%));
-        color: #ffc947;
-        padding:10px;
-    }
+    color: #ffc947;
+    padding:10px;
+    filter: none;
+}
     
     .nav-link,.navbar-brand {
         color: #ffc947 !important;
@@ -30,12 +26,27 @@ body{
     .navbar-dark .navbar-collapse{
         margin:0px  0px 0px 0px;
     }
-html{
-    background-color: rgba(104, 255, 154, 0.795);
-    z-index: 0;
-}
 
-n{
-    border: red 1px;
+.site{
+    margin-top: 20px;;
+    width: 1000px;
+    height: 500px;
+    color: azure;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif Impact;
+}
+.box{
+    background-color: rgba(245, 245, 245, 0.8);
+    height: auto;
+    width: 750px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 125px;
+    text-shadow: 2px;
+    color: rgb(61, 61, 61);
     
+
+}
+.ytb-player{
+    margin-left: 100px;
 }
