@@ -11,7 +11,12 @@ body{
     padding:10px;
     filter: none;
 }
-    
+.row-content {
+    margin: 0px auto;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px ridge #28a745 ;
+    min-height: 400px; 
+}
     .nav-link,.navbar-brand {
         color: #ffc947 !important;
     }
@@ -42,6 +47,7 @@ body{
     border-radius: 15px;
     text-align: center;
     margin-left: 125px;
+    margin-right: 125px;
     text-shadow: 2px;
     color: rgb(61, 61, 61);
     
@@ -49,4 +55,5 @@ body{
 }
 .ytb-player{
     margin-left: 100px;
+    margin-right: 100px;
 }
