@@ -34,26 +34,45 @@ body{
 
 .site{
     margin-top: 20px;;
-    width: 1000px;
-    height: 500px;
+    width: auto;
+    height: auto;
     color: azure;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif Impact;
 }
 .box{
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(245, 245, 245, 0.7);
     height: auto;
-    width: 750px;
+    width: auto;
     border-radius: 15px;
     text-align: center;
-    margin-left: 125px;
-    margin-right: 125px;
+    margin-left: auto;
+    margin-right: auto;
     text-shadow: 2px;
     color: rgb(61, 61, 61);
     
 
 }
 .ytb-player{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.twitch{
+    display: flex;
+}
+.twitch-chat{
+    width: 25%;
+    height: 750px;
+    align-content: right;
+}
+.twitch-video{
+    align-content: left;
+    width:100%;
+    height: 750px;
+}
+.twitch-chat,.twitch-video{
+    flex: 1;
+}
+p,h1,h2{
+    opacity: 100%;
 }
