@@ -1,5 +1,5 @@
 body{
-    background-image: url("./img/space-stars-texture.webp");
+    background-image: url("./img/space-stars-texture.png");
     backdrop-filter: blur(1px);
     padding: 60px 0px 0px 0px;
         z-index:0;
