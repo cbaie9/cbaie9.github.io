@@ -76,3 +76,40 @@ body{
 p,h1,h2{
     opacity: 100%;
 }
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px;
+    background-color: rgba(41, 38, 47, 0.6);
+    margin-top: 25px;
+}
+.feet, .liens{
+    color: antiquewhite;
+    padding: 45px;
+}
+.titre_footer{
+    text-align: left;
+    width: 50%;
+}
+.letact{
+    text-align : right;
+    width: 50%;
+    padding-right: 45px;
+}
+.link_youtube:visited,.link_youtube, .link_mail, .link_mail:visited, .link_twitch, .link_twitch:visited, .link_discord, .link_discord:visited{
+    color: antiquewhite;
+}
+.link_youtube:hover, .link_youtube:active{
+    color: red;
+}
+.link_mail:hover, .link_mail:active{
+    color: aqua;
+}
+.link_twitch:hover, .link_twitch:active{
+    color: rgb(104, 5, 104);
+}
+.link_discord:hover, .link_discord:active{
+    color:rgb(11, 58, 187);
+}
