@@ -1,6 +1,6 @@
 body{
    
-    background-image: url("./img/bg-body.png");
+    background-image: url("img/bg-body.png");
     padding: 60px 0px 0px 0px;
         z-index:0;
     
@@ -31,8 +31,3 @@ body{
     .navbar-dark .navbar-collapse{
         margin:0px  0px 0px 0px;
     }
-.mycarousel {
-        background: #241b18;
-        margin: 0px auto;
-        border: 1px solid #ffffff;
-}
