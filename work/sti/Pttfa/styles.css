@@ -113,3 +113,10 @@ footer {
 .link_discord:hover, .link_discord:active{
     color:rgb(11, 58, 187);
 }
+.link_discord, .link_mail, .link_youtube, .link_twitch{
+    font-size: larger;
+}
+.credit{
+    text-align: center;
+    padding-bottom: 15px;
+}
