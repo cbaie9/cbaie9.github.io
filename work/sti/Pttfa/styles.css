@@ -1,6 +1,6 @@
 body{
     background-image: url("./IMG/space-stars-texture.webp");
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(5%);
     padding: 60px 0px 0px 0px;
         z-index:0;
     
@@ -41,9 +41,12 @@ body{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif Impact;
 }
 .box{
-    background-color: rgba(245, 245, 245, 0.7);
+    background-color: rgba(245, 245, 245, 0.5);
     height: auto;
-    width: auto;
+    width: fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
     border-radius: 15px;
     text-align: center;
     margin-left: auto;
@@ -64,6 +67,7 @@ body{
     width: 25%;
     height: 750px;
     align-content: right;
+    padding-right: -50px;
 }
 .twitch-video{
     align-content: left;
@@ -82,7 +86,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     height: 300px;
-    background-color: rgba(41, 38, 47, 0.6);
+    background-color: rgba(41, 38, 47, 0.7);
     margin-top: 25px;
 }
 .feet, .liens{
@@ -119,4 +123,23 @@ footer {
 .credit{
     text-align: center;
     padding-bottom: 15px;
+}
+.box:hover, .box2:hover{
+    background-color: rgba(245, 245, 245, 0.7);
+}
+.box2{
+    background-color: rgba(245, 245, 245, 0.5);
+    height: auto;
+    width:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px;
+    color: rgb(61, 61, 61);
+    
+
 }
