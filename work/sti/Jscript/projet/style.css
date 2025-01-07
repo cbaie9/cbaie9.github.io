@@ -8,6 +8,10 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    width: 250px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 35%;
 }
 
 main {
