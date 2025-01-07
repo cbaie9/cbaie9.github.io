@@ -1,0 +1,33 @@
+Q1 - Les version sont nommé par ES-[numéro], de nos jour c'est l'année car le language est mis à jour pour améliorer les performances et les fonctionnalités 
+
+Q2 - La différence est qu'il faudra link les deux fichier pour le faire fonctionner 
+
+Q4 - On remplacer juste l'evenement de déclanchement de la fonction 
+Q5 
+<html>
+   <head>
+      <script type="text/javascript">
+         var somme = 1 + 2;
+      </script>
+   </head>
+   <body>
+      <h1>
+         La somme = 
+         <script type="text/javascript">
+            document.write(somme)
+         </script>
+      </h1>
+   </body>
+</html>
+Q8 - Le Document.getElementById() va chercher tout éléments dont l'id est égale a celui choisi dans le code pour y récupéré l'information donnée
+
+Q9 - Le code Css contient une très gross marge du coté droit et gauche alors que le javascript va chercher les information entrée dans les boîtes de dialogues html ( select ) 
+
+Q10 -
+    function maFonction(){
+var lar=prompt("donner la largeur");
+var long =prompt("donner la longueur");
+
+
+var surface= parseInt(long)* parseInt(lar);
+alert(surface);

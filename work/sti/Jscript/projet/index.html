@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant en ligne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant en ligne </h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <form>
+                <label for="entree">Entrée :</label>
+                <select id="entree" name="entree" onchange="calc_restau()">
+                    <option value="">Choisissez une entrée</option>
+                    <option value="Vide">Vide</option>
+                    <option value="Salade de tomates">Salade de tomates (12€)</option>
+                    <option value="Pate">patée de canard (15€)</option>
+                </select>
+                <br><br>
+                <label for="plat">Plat :</label>
+                <select id="plat" name="plat" onchange="calc_restau()">
+                    <option value="">Choisissez un plat</option>
+                    <option value="Purée">tre la purée de pomme de terre(15€)</option>
+                    <option value="Steak haché">Steak haché (25€)</option>
+                    <option value="Poulet grillé">Poulet grillé (20€)</option>
+                </select>
+                <br><br>
+                <label for="dessert">Dessert :</label>
+                <select id="dessert" name="dessert" onchange="calc_restau()">
+                    <option value="">Choisissez un dessert</option>
+                    <option value="Vide">Vide</option>
+                    <option value="Crème brûlée">Crème brûlée (8€)</option>
+                    <option value="Tarte tatin">Tarte tatin (10€)</option>
+                </select>
+                <br><br>
+                
+            </form>
+            <button id="payer" onclick="calc_restau()">Payer</button>
+        </section>
+        <section id="commande">
+            <h2>Votre commande</h2>
+            <p>Total : <span id="total">"Veuillez validez la commande"</span></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

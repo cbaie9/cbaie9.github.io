@@ -1,0 +1,22 @@
+Q1 - La variable de type let sont confiné dans leur bloc de déclaration mais plus optimisé et les const ne peuvent pas être modifier après leur création
+
+Q2 - Ce sera la variable let car modifiable et restreint 
+Q5 - Car on est dans un méthode de l'objet pour referencer l'objet dans lequel on est 
+Q5 - Il affiche dans le chat chaque objet qu'il contient, ici dans ce cas, il log la fonction associé a ces élément ( fonction informarion )
+
+Q6 
+  function afficher(){
+    for (let i = 0; i < personnes.length; i++) {
+        console.log(personnes[i].informarion());
+      }
+    //personnes.forEach(element => console.log(element.informarion()));
+  }
+
+Q7 
+map - reformuler/ rarranger 
+reduce - additionne les valeur pour en forme qu'une 
+slice - coupe un tableau de manière que l'on veut 
+join - fusionne tous les élement d'une tableau et les relie par un caratère, par défault une virgule
+Q7 - il exécute et réarranche les element de la fonction 
+Q8 - C'est une variable constant 
+Q12 - Reduce compact une variable les age puis il n'y que a les diviser par le nombre de personne 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="calc_style.css">
+</head>
+<body>
+    <div class="calculatrice">
+        <input type="text" id="ecran" disabled>
+        <div class="clavier">
+            <button class="bouton" onclick="afficher('7')">7</button>
+            <button class="bouton" onclick="afficher('8')">8</button>
+            <button class="bouton" onclick="afficher('9')">9</button>
+            <button class="bouton" onclick="afficher('/')">/</button>
+            <button class="bouton" onclick="afficher('4')">4</button>
+            <button class="bouton" onclick="afficher('5')">5</button>
+            <button class="bouton" onclick="afficher('6')">6</button>
+            <button class="bouton" onclick="afficher('*')">*</button>
+            <button class="bouton" onclick="afficher('1')">1</button>
+            <button class="bouton" onclick="afficher('2')">2</button>
+            <button class="bouton" onclick="afficher('3')">3</button>
+            <button class="bouton" onclick="afficher('-')">-</button>
+            <button class="bouton" onclick="afficher('0')">0</button>
+            <button class="bouton" onclick="afficher('.')">.</button>
+            <button class="bouton" onclick="afficher('+')">+</button>
+            <button class="bouton" onclick="effacer()">C</button>
+            <button class="bouton" onclick="calculer()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
