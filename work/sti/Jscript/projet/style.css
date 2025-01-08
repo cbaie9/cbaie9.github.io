@@ -1,19 +1,22 @@
 body {
+    
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
 header {
+    display: flex;
+    justify-content: center;
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-    width: 250px;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-left: 35%;
+    border-radius: 50px;
 }
-
+section{
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(94, 94, 94, 0.2);
+}
 main {
     display: flex;
     flex-direction: column;
