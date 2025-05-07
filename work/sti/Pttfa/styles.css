@@ -11,6 +11,9 @@ body{
     padding:10px;
     filter: none;
 }
+.row {
+    margin-bottom: 15px;
+}
 .row-content {
     margin: 0px auto;
     padding: 15px 0px 15px 0px;
@@ -45,7 +48,7 @@ body{
     width: fit-content;
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     border-radius: 15px;
     text-align: center;
     margin-left: auto;
@@ -144,4 +147,7 @@ footer {
 }
 #ytb_player{
     width: 450px;
+}
+.comp {
+    padding-bottom: 15px;
 }
