@@ -14,9 +14,19 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
          <!---CDN Javascript poppser -------------------------------------->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="starscript.js"></script>
+        <script src="scroll.js"></script>
 </head>
+<div id="background-image" style="background-image: url('./IMG/space-stars-texture.webp')"></div>
+<canvas id="starCanvas"></canvas>
+<div id="content-container">
+  <!-- Votre contenu existant ici -->
+   <body>
 
-<body>
+<div id="background-image"></div>
+<canvas id="starCanvas"></canvas>
+<div id="content-container">
+
     <!------------------------------------nav -->
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
 
@@ -51,7 +61,7 @@
             <h1>Hello there</h1>
             <div class="box">
                 <h2>Je suis un dev2con</h2>
-                <p>Je suis cbaie9, un dev de truc sur le web</p>
+                <p>Je suis cbaie9, alias clément, un dev de truc sur le web</p>
                 <h3>Voici mes compétences</h3>
                 <!---Début card-->
                 <card id="comp" class="comp">
@@ -109,7 +119,7 @@
               <div class="row row-cols-1 row-cols-md-1 xl-1">
                 <div class="col">
                   <br>
-                  <h4>Contribution github</h4>
+                  <h4>Contribution github ( Chaque point est un ajout de code sur le site )</h4>
                   <br>
                   <div class="card h-50">
                       <img src="./IMG/contributions.png" alt="Contribution" href="https://github.com/cbaie9" class="card-img-top"> <br>
@@ -173,28 +183,74 @@
             </div>
         </div>
     </div>
-  </body>
-  <!--Footer-->
-<footer id="footer">
-  <div class="feet">
-    <div class="row row-cols-1 row-cols-md-2">
-      <div class="titre_footer">
-        <p>C'est un porfollio tu veut que je mette quoi en footer</p>
-      </div>
-      <div class="letact">
-          <h4>Contact</h4>
-          <a class="link_mail" href="mailto:cbaie9@proton.me"><strong><span class="fas fa-link"></span> Cbaie9@proton.me</strong></a><br>
-          <a class="link_youtube" href="https://www.youtube.com/@cbaie9393"><strong><span class="fas fa-link"></span></i> Youtube</strong></a><br>
-          <a class="link_twitch" href="https://www.twitch.com/cbaie9"><strong><span class="fas fa-link"></span> Twitch</strong></a><br>
-          <a class="link_discord" href="https://discord.gg/X7jftPfxB3"><strong><span class="fas fa-link"></span> Discord</strong></a><br>
-      </div>
-
-    </div>
-    <br>
-    <div class="credit">
-      <h6><strong>Cbaie9 - 2024</strong></h6>
-    </div>
-    </div>
   </div>
-</footer>
+</body>
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfollio2cbaie9</title>
+    <link rel="icon" href="./IMG/channels4_profile.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+</head>
+<body>
+    <!-- Votre contenu existant reste inchangé jusqu'au footer -->
+    
+    <!-- Nouveau Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-md-4 footer-section">
+                    <h3 class="footer-title">À propos</h3>
+                    <p>Portfolio de cbaie9, développeur qui fait des petit project</p>
+                </div>
+                
+                <div class="col-md-4 footer-section">
+                    <h3 class="footer-title">Liens rapides</h3>
+                    <div class="footer-links">
+                        <a href="index.html#body"><i class="fas fa-home"></i> Accueil</a><br>
+                        <a href="index.html#comp"><i class="fas fa-code"></i> Projets</a><br>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="footer-links">
+                        <a class="lien_mail" href="mailto:cbaie9@proton.me"><i class="fas fa-envelope"></i> cbaie9@proton.me</a><br>
+                        <a class="lien_github" href="https://github.com/cbaie9" target="_blank"><i class="fab fa-github"></i> GitHub</a><br>
+                        <a class="lien_youtube" href="https://www.youtube.com/@cbaie9" target="_blank"><i class="fab fa-youtube"></i> YouTube</a><br>
+                        <a class="lien_twitch" href="https://www.twitch.com/cbaie9" target="_blank"><i class="fab fa-twitch"></i> Twitch</a><br>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="social-icons text-center">
+                        <a class="lien_github"  href="https://github.com/cbaie9" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="lien_youtube" href="https://www.youtube.com/@cbaie9" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="lien_twitch" href="https://www.twitch.com/cbaie9" target="_blank"><i class="fab fa-twitch"></i></a>
+                        <a class="lien_discord" href="https://discord.gg/X7jftPfxB3" target="_blank"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright">
+                        <p>&copy; 2024-2025 cbaie9. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="starscript.js"></script>
+</body>
 </html>

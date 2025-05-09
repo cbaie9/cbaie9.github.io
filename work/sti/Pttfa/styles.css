@@ -1,153 +1,169 @@
-body{
-    background-image: url("./IMG/space-stars-texture.webp");
-    backdrop-filter: blur(1px);
-    padding: 60px 0px 0px 0px;
-        z-index:0;
-    
-    }
-.navbar-dark {
-    background: linear-gradient(hsl(209, 100%, 23%), hsl(223, 79%, 47%), hsl(240, 70%, 31%));
-    color: #ffc947;
-    padding:10px;
-    filter: none;
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #000011, #110022, #1a0033, #000000);
 }
-.row {
-    margin-bottom: 15px;
-}
-.row-content {
-    margin: 0px auto;
-    padding: 15px 0px 15px 0px;
-    min-height: 400px; 
-}
-    .nav-link,.navbar-brand {
-        color: #ffc947 !important;
-    }
-    .nav-link:hover{
-        color: #28a745 !important;
-    }
-    .navbar-dark .fa-bars{
-        color:#ffc947;
-    
-    }
-    
-    .navbar-dark .navbar-collapse{
-        margin:0px  0px 0px 0px;
-    }
 
-.site{
-    margin-top: 20px;;
-    width: auto;
-    height: auto;
-    color: azure;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif Impact;
+#background-image {
+    display: none; /* Désactivé car nous utilisons le dégradé directement sur body */
 }
-.box{
-    background-color: rgba(245, 245, 245, 0.5);
-    height: auto;
-    width: fit-content;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 15px;
-    border-radius: 15px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 2px;
-    color: rgb(61, 61, 61);
-    
 
+#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 }
-.ytb-player{
-    margin-left: auto;
-    margin-right: auto;
+
+#content-container {
+    position: relative;
+    z-index: 2;
+    padding: 60px 20px;
 }
-.twitch{
-    display: flex;
+
+/* Styles pour le contenu principal */
+.box, .box2 {
+    background-color: white;
+    color: rgb(26, 26, 26);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.twitch-chat{
-    width: 25%;
-    height: 750px;
-    align-content: right;
-    padding-right: -50px;
+
+.card {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid rgba(0,0,0,0.1);
 }
-.twitch-video{
-    align-content: left;
-    width:100%;
-    height: 750px;
+
+.card-body, .card-header, .card-title, .card-text {
+    color: black !important;
 }
-.twitch-chat,.twitch-video{
-    flex: 1;
+
+/* Styles spécifiques pour les liens */
+a {
+    color: #0066cc;
+    transition: color 0.3s;
 }
-p,h1,h2{
-    opacity: 100%;
+
+a:hover {
+    color: #004499;
+    text-decoration: none;
 }
-/*FOOTER*/
+
+/* Media queries */
+@media (max-width: 768px) {
+    .box, .box2 {
+        padding: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #starCanvas {
+        display: none;
+    }
+}
+/* Styles pour la navbar avec transition plus longue */
+.navbar {
+    transition: all 1.5s ease-in-out; /* Augmentez de 0.3s à 0.8s */
+    background: linear-gradient(135deg, #242450 0%, #072b8f 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style alternatif avec transition longue */
+.navbar-light {
+    transition: all 1.5s ease-in-out; /* Même durée ici */
+    background: linear-gradient(135deg,#92a7be 0%, #8cb9e5 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Transition pour les liens */
+/* Transition pour l'icône du toggler */
+.navbar-toggler-icon {
+    transition: filter 0.8s ease-in-out;
+}
+h1{
+    color: #fc8600;
+}
+.box, .box2, .card {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-body, .card-header, .card-title, .card-text {
+    color: black !important;
+}
+
+/* Style du footer amélioré */
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 300px;
-    background-color: rgba(41, 38, 47, 0.7);
-    margin-top: 25px;
+    background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+    color: white;
+    padding: 40px 0;
+    border-top: 4px solid #4a4a4a;
 }
-.feet, .liens{
-    color: antiquewhite;
-    padding: 45px;
-}
-.titre_footer{
-    text-align: left;
-    width: 50%;
-}
-.letact{
-    text-align : right;
-    width: 50%;
-    padding-right: 45px;
-}
-.link_youtube:visited,.link_youtube, .link_mail, .link_mail:visited, .link_twitch, .link_twitch:visited, .link_discord, .link_discord:visited{
-    color: antiquewhite;
-}
-.link_youtube:hover, .link_youtube:active{
-    color: red;
-}
-.link_mail:hover, .link_mail:active{
-    color: aqua;
-}
-.link_twitch:hover, .link_twitch:active{
-    color: rgb(104, 5, 104);
-}
-.link_discord:hover, .link_discord:active{
-    color:rgb(11, 58, 187);
-}
-.link_discord, .link_mail, .link_youtube, .link_twitch{
-    font-size: larger;
-}
-.credit{
-    text-align: center;
-    padding-bottom: 15px;
-}
-.box:hover, .box2:hover{
-    background-color: rgba(245, 245, 245, 0.7);
-}
-.box2{
-    background-color: rgba(245, 245, 245, 0.5);
-    height: auto;
-    width:auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 5px;
-    border-radius: 15px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: 1px;
-    text-shadow: 2px;
-    color: rgb(61, 61, 61);
-    
 
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-#ytb_player{
-    width: 450px;
+
+.footer-section {
+    margin-bottom: 30px;
 }
-.comp {
-    padding-bottom: 15px;
+
+.footer-title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #4a90e2;
+}
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    color: #bbb;
+}
+.lien_discord:hover {
+    color: #072b8f;
+    transition: color 0.3s ease;
+    font-size: large;
+}
+.lien_github:hover, .lien_twitch:hover {
+    color: #e204ff;
+    transition: color 0.3s ease;
+    font-size: large;
+}
+.lien_mail:hover     {
+    color: #0f521e;
+    transition: color 0.3s ease;
+    font-size: large;
+}
+.lien_youtube:hover {
+    color: #d30303;
+    transition: color 0.3s ease;
+    font-size: large;
+}
+.lien_discord, .lien_github, .lien_mail, .lien_youtube, .lien_twitch{
+    font-size: medium;
 }
