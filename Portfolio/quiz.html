@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="https://cbaie9.github.io/work/sti/Pttfa/styles.css">
+<link rel="icon" href="https://raw.githubusercontent.com/cbaie9/cbaie9.github.io/refs/heads/main/work/sti/Pttfa/IMG/channels4_profile.ico">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+	        flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .quiz-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .answers {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .answers li {
+            margin: 10px 0;
+        }
+
+        .answers button {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .answers button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+	    .feet{
+	        padding-bottom: 0px;
+            margin-bottom:0px;
+            width: max-content;
+	}
+    </style>
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+
+        
+        <div class="container"> <!----------------------------Container Nvabar------------------------------------------------------------------------------->  
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="fas fa-bars fa-lg"></span>
+              </button>
+  
+             <a class="navbar-brand" href="./index.html"><img src="https://avatars.githubusercontent.com/u/75169332?v=4" class="rounded float-left" height="55" width="55">    </a>
+             
+             <div class="collapse navbar-collapse" id="Navbar">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active"><a class="nav-link" href="index.html#body"><span class="fa fa-home fa-lg"></span> Acceuil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#comp"><span class="fa fa-info fa-lg"></span> Projets</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#footer"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://cbaie9.github.io/work/sti/Jscript/projet/"><span class="fa fa-address-card fa-lg"></span> Javascript test</a></li>
+                  <li class="nav-item"><a class="nav-link" href="quiz.html"><span class="fas fa-umbrella-beach"></span> Quiz</a></li>
+              </ul>
+          </div>
+                             
+          </div>
+      </nav>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <div class="question" id="question">Quelle est la capitale de la France ? ( Oui la question est éclaté au sol et ?) </div>
+        <ul class="answers" id="answers">
+            <li><button onclick="checkAnswer(this)" data-correct="false">Berlin</button></li>
+            <li><button onclick="checkAnswer(this)" data-correct="false">Madrid</button></li>
+            <li><button onclick="checkAnswer(this)" data-correct="true">Paris</button></li>
+            <li><button onclick="checkAnswer(this)" data-correct="false">Rome</button></li>
+        </ul>
+        <div class="result" id="result"></div>
+	<p id="rr4">C'est beau ptn</p>
+    </div>
+
+    <script>
+        function checkAnswer(button) {
+            const isCorrect = button.getAttribute('data-correct') === 'true';
+            const result = document.getElementById('result');
+	    const rr4 = document.getElementById('rr4');
+            if (isCorrect) {
+                result.textContent = 'Bonne réponse !';
+                result.style.color = 'green';
+		rr4.style.color = 'blue';
+            } else {
+                result.textContent = 'Mauvaise réponse. Réessayez !';
+                result.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+<footer id="footer">
+    <div class="feet">
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="titre_footer">
+          <p>C'est un porfollio tu veut que je mette quoi en footer</p>
+        </div>
+        <div class="letact">
+            <h4>Contact</h4>
+            <a class="link_mail" href="mailto:cbaie9@proton.me"><strong><span class="fas fa-link"></span> Cbaie9@proton.me</strong></a><br>
+            <a class="link_youtube" href="https://www.youtube.com/@cbaie9393"><strong><span class="fas fa-link"></span> Youtube</strong></a><br>
+            <a class="link_twitch" href="https://www.twitch.com/cbaie9"><strong><span class="fas fa-link"></span> Twitch</strong></a><br>
+            <a class="link_discord" href="https://discord.gg/X7jftPfxB3"><strong><span class="fas fa-link"></span> Discord</strong></a><br>
+        </div>
+  
+      </div>
+      <br>
+      <div class="credit">
+        <h6><strong>Cbaie9 - 2024/2025</strong></h6>
+      </div>
+      </div>
+    
+  </footer>
+</html>
+
