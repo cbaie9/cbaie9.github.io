@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiques Palamod Renew</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+        .stat-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 40%;
+        }
+        .total-box {
+            background-color: #f0f8ff;
+            border: 2px solid #4682b4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+        .error {
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Statistiques de téléchargement de Palamod Renew</h1>
+    
+    <div class="stats-container">
+        <div class="stat-box">
+            <h2>Modrinth</h2>
+            <div id="modrinth-downloads" class="loading">Chargement...</div>
+        </div>
+        
+        <div class="stat-box">
+            <h2>CurseForge</h2>
+            <div id="curseforge-downloads" class="loading">Chargement...</div>
+        </div>
+    </div>
+    
+    <div class="total-box">
+        <h2>Total des téléchargements</h2>
+        <div id="total-downloads" class="loading">Calcul en cours...</div>
+    </div>
+
+    <script>
+        // Fonction pour récupérer les données de Modrinth
+        async function fetchModrinthDownloads() {
+            const modrinthUrl = 'https://api.modrinth.com/v2/project/palamod-renew';
+            
+            try {
+                const response = await fetch(modrinthUrl);
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP: ${response.status}`);
+                }
+                const data = await response.json();
+                return data.downloads;
+            } catch (error) {
+                console.error('Erreur lors de la récupération des données Modrinth:', error);
+                document.getElementById('modrinth-downloads').className = 'error';
+                document.getElementById('modrinth-downloads').textContent = 'Erreur de chargement';
+                return 0;
+            }
+        }
+
+        // Fonction pour récupérer les données de CurseForge
+        async function fetchCurseForgeDownloads() {
+            // Note: L'API CurseForge nécessite une clé API
+            // Ceci est une solution temporaire qui peut ne pas fonctionner à long terme
+            const curseforgeUrl = 'https://api.cfwidget.com/minecraft/mc-mods/palamod-renew';
+            
+            try {
+                const response = await fetch(curseforgeUrl);
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP: ${response.status}`);
+                }
+                const data = await response.json();
+                return data.downloads.total;
+            } catch (error) {
+                console.error('Erreur lors de la récupération des données CurseForge:', error);
+                document.getElementById('curseforge-downloads').className = 'error';
+                document.getElementById('curseforge-downloads').textContent = 'Erreur de chargement';
+                return 0;
+            }
+        }
+
+        // Fonction principale pour afficher les statistiques
+        async function displayStats() {
+            const modrinthDownloads = await fetchModrinthDownloads();
+            const curseforgeDownloads = await fetchCurseForgeDownloads();
+            
+            // Afficher les résultats individuels
+            if (modrinthDownloads > 0) {
+                document.getElementById('modrinth-downloads').textContent = modrinthDownloads.toLocaleString() + ' téléchargements';
+            }
+            
+            if (curseforgeDownloads > 0) {
+                document.getElementById('curseforge-downloads').textContent = curseforgeDownloads.toLocaleString() + ' téléchargements';
+            }
+            
+            // Calculer et afficher le total
+            const totalDownloads = modrinthDownloads + curseforgeDownloads;
+            document.getElementById('total-downloads').textContent = totalDownloads.toLocaleString() + ' téléchargements';
+        }
+
+        // Lancer le chargement des données lorsque la page est prête
+        document.addEventListener('DOMContentLoaded', displayStats);
+    </script>
+</body>
+</html>

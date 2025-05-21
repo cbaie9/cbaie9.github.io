@@ -13,16 +13,18 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
-    z-index: 1;
+    z-index: -1; /* Changé de 1 à -1 pour être en arrière-plan */
+    background: transparent;
 }
 
 #content-container {
     position: relative;
     z-index: 2;
     padding: 60px 20px;
+    background: transparent;
 }
 
 /* Styles pour le contenu principal */
@@ -167,37 +169,58 @@ footer {
 .lien_discord, .lien_github, .lien_mail, .lien_youtube, .lien_twitch{
     font-size: medium;
 }
-/* Ajouter à styles.css */
-.twitch {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 100%;
+.img_pres_gen{
+    width: 55%;
+    height: 35%;
 }
 
-.twitch-video {
-    flex: 3;
-    min-height: 400px;
-}
-
-.twitch-chat {
-    flex: 1;
-    min-height: 400px;
-}
-
-.twitch iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
+/* Extension du style existant */
+#discord-box {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    width: 350px;
+    z-index: 10;
+    box-shadow: 0 0 10px #000;
     border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    .twitch {
-        flex-direction: column;
-    }
-    
-    .twitch-chat iframe {
-        width: 100%;
-    }
-}
+    overflow: hidden;
+  }
+  
+  .hoverable {
+    position: relative;
+    cursor: help;
+    font-weight: bold;
+    color: #d35400;
+  }
+  
+  .hoverable:hover .tooltip-box {
+    display: block;
+  }
+  
+  .tooltip-box {
+    display: none;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00000055;
+    z-index: 20;
+  }
+  
+  .tooltip-box img {
+    width: 49%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .tooltip-text {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
