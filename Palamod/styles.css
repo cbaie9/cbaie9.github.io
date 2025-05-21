@@ -23,7 +23,7 @@ body {
 #content-container {
     position: relative;
     z-index: 2;
-    padding: 60px 20px;
+    padding-top: 60px;
     background: transparent;
 }
 
