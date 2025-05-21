@@ -45,11 +45,11 @@
             
             // Afficher les résultats individuels
             if (modrinthDownloads > 0) {
-                document.getElementById('modrinth-downloads').textContent = modrinthDownloads.toLocaleString() + ' téléchargements';
+                document.getElementById('modrinth-downloads').textContent = modrinthDownloads.toLocaleString() + ' téléchargements sur Modrinth';
             }
             
             if (curseforgeDownloads > 0) {
-                document.getElementById('curseforge-downloads').textContent = curseforgeDownloads.toLocaleString() + ' téléchargements';
+                document.getElementById('curseforge-downloads').textContent = curseforgeDownloads.toLocaleString() + ' téléchargements sur Curseforge';
             }
             
             // Calculer et afficher le total
