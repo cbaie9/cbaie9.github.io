@@ -13,16 +13,18 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
-    z-index: 1;
+    z-index: -1; /* Changé de 1 à -1 pour être en arrière-plan */
+    background: transparent;
 }
 
 #content-container {
     position: relative;
     z-index: 2;
     padding: 60px 20px;
+    background: transparent;
 }
 
 /* Styles pour le contenu principal */
@@ -166,4 +168,38 @@ footer {
 }
 .lien_discord, .lien_github, .lien_mail, .lien_youtube, .lien_twitch{
     font-size: medium;
+}
+/* Ajouter à styles.css */
+.twitch {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.twitch-video {
+    flex: 3;
+    min-height: 400px;
+}
+
+.twitch-chat {
+    flex: 1;
+    min-height: 400px;
+}
+
+.twitch iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .twitch {
+        flex-direction: column;
+    }
+    
+    .twitch-chat iframe {
+        width: 100%;
+    }
 }
