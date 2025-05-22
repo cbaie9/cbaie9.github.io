@@ -16,7 +16,7 @@ body {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: -1; /* Changé de 1 à -1 pour être en arrière-plan */
+    z-index: 1; /* Changé de 1 à -1 pour être en arrière-plan */
     background: transparent;
 }
 
@@ -188,14 +188,44 @@ footer {
   
   .hoverable {
     position: relative;
+    display: inline-block;
     cursor: help;
     font-weight: bold;
     color: #d35400;
-  }
-  
-  .hoverable:hover .tooltip-box {
+}
+
+.hoverable .tooltip-box {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    margin-bottom: 10px;
+}
+
+.hoverable:hover .tooltip-box {
     display: block;
-  }
+}
+
+.tooltip-box img {
+    width: 49%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.tooltip-text {
+    font-size: 0.9em;
+    text-align: center;
+    color: #000 !important;
+}
   
   .tooltip-box {
     display: none;
@@ -211,16 +241,8 @@ footer {
     box-shadow: 0 0 10px #00000055;
     z-index: 20;
   }
-  
-  .tooltip-box img {
-    width: 49%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 8px;
-  }
-  
-  .tooltip-text {
-    font-size: 0.9em;
-    text-align: center;
-  }
-  
+.paladium_ingot {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}  

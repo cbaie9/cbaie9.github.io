@@ -201,3 +201,8 @@ footer {
         width: 100%;
     }
 }
+.paladium_ingot {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}  
