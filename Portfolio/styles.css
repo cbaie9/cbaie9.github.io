@@ -27,7 +27,6 @@ body {
 
 /* Styles pour le contenu principal */
 .box, .box2 {
-    background-color: white;
     color: rgb(26, 26, 26);
     padding: 20px;
     margin-bottom: 30px;

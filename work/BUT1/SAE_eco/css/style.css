@@ -1,0 +1,45 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+nav{
+    display: block;
+    flex-direction: row;
+    align-content: baseline;
+}
+.navbar {
+    transition: all 1.5s ease-in-out; /* Augmentez de 0.3s à 0.8s */
+    background: linear-gradient(135deg, #242450 0%, #072b8f 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style alternatif avec transition longue */
+.navbar-light {
+    transition: all 1.5s ease-in-out; /* Même durée ici */
+    background: linear-gradient(135deg,#92a7be 0%, #8cb9e5 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Transition pour les liens */
+/* Transition pour l'icône du toggler */
+.navbar-toggler-icon {
+    transition: filter 0.8s ease-in-out;
+}
+.box, .box2 {
+    color: rgb(26, 26, 26);
+    background-color: white;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+body{
+
+    background: linear-gradient(to bottom right, #000011, #110022, #1a0033, #000000);
+}
+.background_white_logo{
+    background-color: whitesmoke;
+}
