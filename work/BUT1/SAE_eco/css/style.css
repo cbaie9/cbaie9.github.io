@@ -99,3 +99,29 @@ abbr{
     margin-bottom: 25px;
     align-self: center;
 }
+.black_background{
+    background-color: #000000;
+    color: #000000;
+    border: 2px solid #000000
+}
+table {
+    border: 2px solid rgb(140 140 140);
+  }
+  
+th,td {
+    border: 1px solid rgb(160 160 160);
+}
+.div_logo_org{
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 6;
+    flex-grow: 4;
+}
+.logo_org{
+    display: flex;
+    flex: 2;
+    max-width: 50px;
+    justify-content: space-between;
+    align-self: flex-end;
+}
