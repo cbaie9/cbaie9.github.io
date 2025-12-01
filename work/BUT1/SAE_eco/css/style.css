@@ -69,6 +69,7 @@ abbr{
 .taches{
     padding-left: 5px;
     padding-right: 5px;
+    color: #003D7A;
 }
 .taches:hover{
     font-size: large;
@@ -82,8 +83,11 @@ abbr{
 .footer_div{
     padding-bottom: 5%;
 }
+.lien_mail{
+    color:#70BCFF;
+}
 .lien_mail:hover{
-    color: #0f521e;
+    color: #2ceb56;
     transition: color 0.3s ease;
 }
 .copyright {
