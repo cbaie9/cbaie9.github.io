@@ -124,4 +124,21 @@ th,td {
     max-width: 50px;
     justify-content: space-between;
     align-self: flex-end;
+    padding-bottom: 5px;
+}
+.logo_org2{
+    display: flex;
+    flex: 2;
+    max-width: 65px;
+    justify-content: space-between;
+    align-self: flex-end;
+    padding-bottom: 5px;
+}
+.div_tab{
+    display: flex;
+    align-items: flex-end;
+    text-align: end;
+}
+.marge{
+    max-width: 850px;
 }
