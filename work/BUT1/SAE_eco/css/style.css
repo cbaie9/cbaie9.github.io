@@ -141,3 +141,18 @@ th,td {
 .marge{
     width: fit-content;
 }
+.flex_org{
+    display: flex;
+    justify-content: space-around;
+}
+.li_next{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.li_prev{
+    display: flex;
+    flex-direction: row;
+}
+i{
+    padding: 5px;
+}
