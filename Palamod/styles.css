@@ -48,27 +48,16 @@ body {
 }
 
 /* Styles spécifiques pour les liens */
-a {
-    color: #0066cc;
-    transition: color 0.3s;
+a{
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #003D7A;
 }
-
-a:hover {
-    color: #004499;
-    text-decoration: none;
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-    .box, .box2 {
-        padding: 15px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #starCanvas {
-        display: none;
-    }
+a:hover{
+    font-size: large;
+    font-weight: bold;
+    color: #c62606;
+    transition: color 0.3s ease;
 }
 /* Styles pour la navbar avec transition plus longue */
 .navbar {
@@ -184,14 +173,14 @@ footer {
     box-shadow: 0 0 10px #000;
     border-radius: 8px;
     overflow: hidden;
-  }
+}
   
   .hoverable {
     position: relative;
     display: inline-block;
     cursor: help;
     font-weight: bold;
-    color: #d35400;
+    color: #943B00;
 }
 
 .hoverable .tooltip-box {
