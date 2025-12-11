@@ -51,7 +51,7 @@ body {
 a{
     padding-left: 5px;
     padding-right: 5px;
-    color: #003D7A;
+    color: #0051A8;
 }
 a:hover{
     font-size: large;
@@ -216,7 +216,7 @@ footer {
     color: #000 !important;
 }
   
-  .tooltip-box {
+.tooltip-box {
     display: none;
     position: absolute;
     bottom: 125%;

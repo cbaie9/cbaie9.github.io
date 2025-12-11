@@ -14,22 +14,22 @@ body{
     background: linear-gradient(hsl(209, 100%, 23%), hsl(223, 79%, 47%), hsl(240, 70%, 31%));
         color: #ffc947;
         padding:10px;
-    }
+}
     
-    .nav-link,.navbar-brand {
+.nav-link,.navbar-brand {
         color: #ffc947 !important;
-    }
-    .nav-link:hover{
+}
+.nav-link:hover{
         color: #28a745 !important;
-    }
-    .navbar-dark .fa-bars{
-        color:#ffc947;
+}
+.navbar-dark .fa-bars{
+    color:#ffc947;
+
+}
     
-    }
-    
-    .navbar-dark .navbar-collapse{
-        margin:0px  0px 0px 0px;
-    }
+.navbar-dark .navbar-collapse{
+    margin:0px  0px 0px 0px;
+}
 html{
     background-color: rgba(104, 255, 154, 0.795);
     z-index: 0;
