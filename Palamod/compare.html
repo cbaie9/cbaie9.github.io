@@ -16,7 +16,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="starscript.js"></script>
         <script src="scroll.js"></script>
-        <script src="stat.js"></script>
+        <script src="tab.js"></script>
 </head>
 <body>
 <div id="content-container">
@@ -49,257 +49,272 @@
         <div class="site" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
             <div class="box">
                 <table>
-                    <tr>
-                        <td>Mods</td>
+                    <tr class="feature-row">
+                        <td>>Mods</td>
                         <td>Palamod Renew</td>
                         <td>Palamod Recreated</td>
                     </tr>
-                    <tr>
+                    <tr class="feature-row">
                         <td>Fonctionnalité</td>
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr>
-                        <td>Minerais (bloc+item associés)</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">
+                            Minerais (bloc+item associés)</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Génération de minerais</td>
-                        <td>✅, variante disponible pour la deepslate</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Génération de minerais</td>
+                        <td data-mod="renew" data-value="1">✅, variante disponible pour la deepslate</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>PalaMachine (stick PvP)</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">PalaMachine (stick PvP)</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Crusher ( block+fonctionnement machine )</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Crusher ( block+fonctionnement machine )</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Grinder</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Grinder</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Arbres Custom ( erable, ostrya etc….)</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Arbres Custom ( erable, ostrya etc….)</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Cobblebreaker</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Cobblebreaker</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Système de /home</td>
-                        <td>✅</td>
-                        <td>❌-&gt; En cours de dev</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Système de /home</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌-&gt; En cours de dev</td>
                     </tr>
-                    <tr>
-                        <td>Système de /spawn</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Système de /spawn</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Backpack</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Backpack</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Système de Métiers</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Système de Métiers</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Système de grades (Titane, Paladium, Endium)</td>
-                        <td>❌</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Système de grades (Titane, Paladium, Endium)</td>
+                        <td data-mod="renew" data-value="0">❌</td>
+                        <td data-mod="recreated" data-value="1"></td>
                     </tr>
-                    <tr>
-                        <td>Lucky Block</td>
-                        <td>Partiel, très incomplét, mais Craftable en survie</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Lucky Block</td>
+                        <td data-mod="renew" data-value="0.5">Partiel, très incomplét, mais Craftable en survie</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Système de /profil</td>
-                        <td>❌</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Système de /profil</td>
+                        <td data-mod="renew" data-value="0">❌</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Portail alchimiste</td>
-                        <td>❌</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Portail alchimiste</td>
+                        <td data-mod="renew" data-value="0">❌</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Système d&#39;argent </td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Système d&#39;argent </td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Adminshop </td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Adminshop </td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>PalaHelp ( wiki intégré au mod )</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">PalaHelp ( wiki intégré au mod )</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>SeedPlanter</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">SeedPlanter</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Glue Balls</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Glue Balls</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Jobs : Système de blockage de craft</td>
-                        <td>✅ désactivable via gamerule</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Jobs : Système de blockage de craft</td>
+                        <td data-mod="renew" data-value="1">✅ désactivable via gamerule</td>
                         <td>❌ n&#39;a pas de métiers, seulement les items</td>
                     </tr>
-                    <tr>
-                        <td>Hammers</td>
-                        <td>✅+enchants moddés</td>
-                        <td>✅+ enchanté moddés</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Hammers</td>
+                        <td data-mod="renew" data-value="1">✅+enchants moddés</td>
+                        <td data-mod="recreated" data-value="1">✅+ enchanté moddés</td>
                     </tr>
-                    <tr>
-                        <td>Paladium Forge</td>
-                        <td>✅</td>
-                        <td>✅ </td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Paladium Forge</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅ </td>
                     </tr>
-                    <tr>
-                        <td>Dynamite et Tnt diverse</td>
-                        <td>✅</td>
-                        <td>✅ sous forme de flèche</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Dynamite et Tnt diverse</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅ sous forme de flèche</td>
                     </tr>
-                    <tr>
-                        <td>Obsidienne Moddées</td>
-                        <td>✅, certaine ne sont que visuelle</td>
-                        <td>✅ pas toute dispo mais la majorité est la</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Obsidienne Moddées</td>
+                        <td data-mod="renew" data-value="1">✅, certaine ne sont que visuelle</td>
+                        <td data-mod="recreated" data-value="1">✅ pas toute dispo mais la majorité est la</td>
                     </tr>
-                    <tr>
-                        <td>Wither custom </td>
-                        <td>❌</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Wither custom </td>
+                        <td data-mod="renew" data-value="0">❌</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Dimension Mineur</td>
-                        <td>✅ accès via lv100/20 mineur selon les versions</td>
-                        <td>✅ selon les version du mod</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Dimension Mineur</td>
+                        <td data-mod="renew" data-value="1">✅ accès via lv100/20 mineur selon les versions</td>
+                        <td data-mod="recreated" data-value="1">✅ selon les version du mod</td>
                     </tr>
-                    <tr>
-                        <td>Mixed endium/Endium</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Mixed endium/Endium</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>/market | /hdv</td>
-                        <td>❌</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">/market | /hdv</td>
+                        <td data-mod="renew" data-value="0">❌</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Music disc custom </td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Music disc custom </td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Totem de fertilitée</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Totem de fertilitée</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Totem à fleur</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Totem à fleur</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Fleur Moddées</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Fleur Moddées</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Unclaim Finder</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Unclaim Finder</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">>✅</td>
                     </tr>
-                    <tr>
-                        <td>Xp Bush</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Xp Bush</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>LootBox</td>
-                        <td>❌</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">LootBox</td>
+                        <td data-mod="renew" data-value="0">❌</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Armure antique</td>
-                        <td>❌</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Armure antique</td>
+                        <td data-mod="renew" data-value="0">❌</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Extracteur </td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Extracteur </td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Enclume</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Enclume</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Farm a spawner</td>
-                        <td>✅, Beta</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Farm a spawner</td>
+                        <td data-mod="renew" data-value="1">✅, Beta</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Boss métiers</td>
-                        <td>❌</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Boss métiers</td>
+                        <td data-mod="renew" data-value="0.5">❌</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>Achivement </td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Achivement </td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Printing Press (book dupe)</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Printing Press (book dupe)</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Online Detector</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Online Detector</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Drawbrige</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Drawbrige</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="0">❌</td>
                     </tr>
-                    <tr>
-                        <td>Coffre moddées </td>
-                        <td>✅</td>
-                        <td>✅</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">Coffre moddées </td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅</td>
                     </tr>
-                    <tr>
-                        <td>SlimePad</td>
-                        <td>✅</td>
-                        <td>✅  mais ne propulse qu&#39;en l&#39;air</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>40/50</td>
-                        <td>31/50</td>
+                    <tr class="feature-row">
+                        <td class="feature-name"><input type="checkbox" class="feature-check">SlimePad</td>
+                        <td data-mod="renew" data-value="1">✅</td>
+                        <td data-mod="recreated" data-value="1">✅  mais ne propulse qu&#39;en l&#39;air</td>
                     </tr>
                 </table>
+                <div class="results">
+                    <h3>Score :</h3>
+                    <p>Palamod Renew : <strong><span id="score-renew">0</span></strong></p>
+                    <p>Palamod Recreated : <strong><span id="score-recreated">0</span></strong></p>
+    
+                    <h3>Éléments manquants :</h3>
+    
+                    <div class="missing-container" style="display:flex; justify-content:space-between;">
+                        <div>
+                            <h4>Renew</h4>
+                            <ul id="missing-renew"></ul>
+                        </div>
+    
+                        <div>
+                            <h4>Recreated</h4>
+                            <ul id="missing-recreated"></ul>
+                        </div>
+                    </div>
+                </div>
             </div>
     </div>
 </div>
